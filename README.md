@@ -13,8 +13,10 @@
 ## 版本 ↔ 分數 ↔ 程式碼 對照（最重要：用來回溯最高分版本）
 | 版本 | CV Overall | 公開榜 | 主要差異 | 產生程式 | 提交檔 |
 |---|---|---|---|---|---|
-| v1-base | 0.315 | **0.3188** (rank 204/367) | LGBM+TabPFN+GRU | `src/main.ipynb` | `submission/1/submission_incl0.csv` |
-| v2-player | **0.341** | 待提交 | + 選手球種傾向(player-marginal) | `src/gen_submission_player.py` | `submission_v2-player_cv0.341_incl0.csv` |
+| v1-base | 0.315 | **0.3188** (rank 204/367) | LGBM+TabPFN+GRU | git tag `v1-base-lb0.319` 內的 `src/main.ipynb` | `submission/1/submission_incl0.csv` |
+| **v2-player (目前 HEAD)** | **0.341** | 待提交 | + 選手球種傾向(player-marginal) | `src/main.ipynb`（現版）或 `src/gen_submission_player.py` | `submission_v2-player_cv0.341_incl0.csv` |
+
+> `src/main.ipynb`（目前版本）= v2 最佳版。要回到 v1：`git checkout v1-base-lb0.319`。
 
 > 比賽以**最後一次上傳**計分。若先前某版較高，務必確保**最後一次提交**回到該最高版（用下方 git tag 回溯對應程式碼即可重現）。
 
