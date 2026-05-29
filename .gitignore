@@ -20,3 +20,6 @@ __pycache__/
 .claude/
 .DS_Store
 *.zip
+
+# 二進位宣傳檔
+*.pptx
