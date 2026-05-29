@@ -1,0 +1,22 @@
+# ===== 機密：絕對不要 commit =====
+tabpfn_apikey.txt
+*.token
+*_token*
+
+# ===== 競賽資料（請從 AIdea 下載，勿公開重新散布）=====
+data/
+
+# ===== 可重新生成的大型快取 =====
+*.npz
+src/*.npz
+
+# ===== Python / Jupyter =====
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# ===== 編輯器 / 本地設定 =====
+.vscode/
+.claude/
+.DS_Store
+*.zip
