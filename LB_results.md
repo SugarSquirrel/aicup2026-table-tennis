@@ -18,6 +18,45 @@
 
 ---
 
+## 2026-05-31 v7-aug clean 結果(最後一次上傳鎖定)
+
+| 屬性 | 值 |
+|---|---|
+| 上傳時間 | 2026-05-31 15:11:21 |
+| Public 分數 | **0.3443582** |
+| Public 排名 | 133/388 |
+| vs v7-aug-ovr 差 | −0.0669(= 我們預測的 server override 加分 +0.060~0.078,實際 +0.0669,**完美對齊**) |
+| Private 預估 | 0.355-0.37(rescued 子集勝出) |
+
+→ Public 0.34 = 我們 v7 模型在公開上「沒有 leak 加分」的真實水準(action+point 都接近 v3 的 0.346,落在 CV-B ±0.005 噪音帶內)。
+
+→ Private 才是真比賽。v7 在 rescued/cold 子集的設計優於其他人(per-stratum 證明)。
+
+---
+
+## 2026-06-02 v8 Time2Vec+FiLM 探索(deadline 當日)
+
+使用者要求「不管 consensus,試最新 SOTA 看能不能衝 0.55」。我選了最對齊「時序當條件」的方向:Time2Vec(替換 GRU 的 numeric Linear)+ FiLM(context-modulate GRU 最終 hidden state)。
+
+**結果**:**沒贏,反而略降**。
+
+| 指標 | v7 | v8 (T2V+FiLM) | Δ |
+|---|---|---|---|
+| action F1 CV-B | 0.3657 | 0.3649 | −0.0008 |
+| point F1 CV-B | 0.1946 | 0.1945 | −0.0001 |
+| server AUC | 0.6151 | 0.6146 | −0.0005 |
+| Overall CV-B | 0.3471 | 0.3467 | −0.0004 |
+| **rescued action** | **0.3518** | **0.2930** | **−0.0588** |
+| **rescued point** | **0.1683** | **0.1354** | **−0.0329** |
+
+**失敗原因**:序列中位長度 2 → Time2Vec 的週期項沒有意義;FiLM 的 modulation 學的是 train-specific pattern,對 rescued/cold(沒在 train 出現的選手)反而是錯的調制。這實證強化了 Oracle 診斷的結論:在這個資料上,加架構容量 = 過擬合 train 選手分布,傷跨選手泛化(=傷私人)。
+
+→ **v8 不 ship**,維持 v7 為最終提交。
+
+詳細:`Claude-ask/brief_round10_v8_t2v_film_negative_result.md`
+
+---
+
 ## 2026-05-30 v7-aug-ovr 結果分析
 
 ### 預測 vs 實際
