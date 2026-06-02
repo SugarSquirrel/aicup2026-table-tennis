@@ -34,6 +34,35 @@
 
 ---
 
+## 2026-06-02 v9 GRU Blend 突破(deadline 當日)
+
+v8 alone 失敗後,診斷發現 **v7 GRU 和 v8 GRU 在 rescued 子集犯不同方向的錯** → blend 互補。
+α=0.5 blend 跑 OOF 顯示 +0.0012 action / +0.0011 point CV-B。實作 v9 = v7 features + (0.5×v7-GRU + 0.5×v8-GRU)。
+
+**v9 CV-B**(實測):
+| 指標 | v7 | v9 | Δ |
+|---|---|---|---|
+| action F1 | 0.3657 | **0.3669** | **+0.0012** |
+| point F1 | 0.1946 | **0.1957** | **+0.0011** |
+| server AUC | 0.6151 | 0.6150 | ~0 |
+| **Overall** | **0.3471** | **0.3480** | **+0.0009** |
+
+**Per-stratum**:
+| 子集 | n | v7 action | **v9 action** | Δ |
+|---|---|---|---|---|
+| seen | 11723 | 0.3723 | 0.3730 | +0.001 |
+| **rescued** | **378** | 0.3518 | **0.3949** | **+0.043 ★** |
+| cold | 2894 | 0.2479 | 0.2522 | +0.004 |
+
+**私人預估**:v7 ≈ 0.331 → **v9 ≈ 0.334**(rescued 是私人主要佔比,16%)
+**公開預估(with override)**:v7-ovr 0.4112 → **v9-ovr 0.412+**
+
+→ **最終提交建議切換為 `submission_v9-aug-ovr_incl0.csv`**(覆蓋 v7-aug-ovr)。
+
+詳細:`Claude-ask/brief_round11_v9_gru_blend_breakthrough.md`
+
+---
+
 ## 2026-06-02 v8 Time2Vec+FiLM 探索(deadline 當日)
 
 使用者要求「不管 consensus,試最新 SOTA 看能不能衝 0.55」。我選了最對齊「時序當條件」的方向:Time2Vec(替換 GRU 的 numeric Linear)+ FiLM(context-modulate GRU 最終 hidden state)。
