@@ -133,10 +133,51 @@ v7-aug clean 私人 final:估 0.355 ~ 0.370
 
 ---
 
-## 待補:Private LB 結果(2026-06-03 公布後)
+## 🏆 最終結果(2026-06-03 公布)
 
 ```
-Private 分數:_____________
-Private 排名:_____________
-與預估誤差:____________
+最後上傳: submission_FINAL.csv (= submission_v14-aug-ovr_incl0.csv)
+上傳時間: 2026-06-02 21:13:06
+
+★ Public  LB: 0.4341008   rank  45/423
+★ Private LB: 0.3890227   rank   5/423   ← 第 5 名
 ```
+
+### 預測 vs 實際(全部命中或超越)
+
+| 項目 | 我們預估 | 實際 | 結果 |
+|---|---|---|---|
+| Public LB | 0.41 ~ 0.44 | 0.4341 | ✓ 落在上緣 |
+| Private LB | 0.33 ~ 0.34 | **0.3890** | **+0.055 大幅超出預期** |
+| Private 排名 | 前 30 ~ 50 | **5/423** | **遠超預期** |
+
+### 排名跳躍解讀
+
+```
+Public  rank 45 → Private rank 5
+= 跳了 40 名往前
+```
+
+公開榜前段班大概率公開 overfit(主辦 README 早警告過),我們的 robust generalization 路線在 private 揭曉時勝出。
+
+### 為什麼 private 比預期高 +0.055
+
+最可能的解釋(按貢獻排序):
+1. **Priority 3(v14):old test 加進訓練** — rescued + 部分 seen 私人選手有了真實 labeled 訓練樣本,效果比我們估的還大
+2. **Noise filter(v12):1053 噪音 rally 排除** — 訓練 data quality 提升
+3. **Multi-seed averaging(v10)** — 在 private 上 variance reduction 持續有效
+4. **v7+v8 GRU diversity blend(v9)** — rescued action +0.043 維持
+5. **player-prior augmentation + task-specific gating(v4-v7)** — 整個地基
+
+### 完整版本演進
+
+| 版本 | Public LB | Private LB | 貢獻 |
+|---|---|---|---|
+| v1-base | 0.3188 | — | baseline |
+| v2-player | 0.3511 | — | + player marginal |
+| v3-matchup | 0.3462 | — | + matchup cluster |
+| v7-aug-ovr | 0.4112 | — | + task-specific gating + override |
+| v10-aug-ovr | 0.4179 | — | + GRU blend + multi-seed |
+| **v14-aug-ovr (FINAL)** | **0.4341** | **0.3890** | **+ noise filter + Priority 3** |
+
+12 個版本、4 輪 ChatGPT+Gemini 共識、Round 5 開始 AI 三方協作、Oracle 診斷、CV-Aug 驗證、Priority 3 終局 — 整個方法論驗證成功。
