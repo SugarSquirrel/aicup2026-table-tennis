@@ -198,13 +198,14 @@ jupyter notebook main.ipynb
 │   └── *.npz                              ← OOF 快取(已 gitignore)
 ├── Claude-ask/                            ← 11 份策略 brief
 ├── ChatGPT-reply/                         ← 6 份共識回覆
-└── submission/                            ← 歷次提交的 CSV 存檔
-    ├── 1/  v1-base
-    ├── 2/  v2-player
-    ├── 3/  v3-matchup
-    ├── 4/  v7-aug-ovr
-    └── 5/  v7-aug clean
+└── submission/                            ← 關鍵版本的 CSV 存檔(中間版見 src 重跑)
+    ├── 1/  v1-base       ├── 5/  v7-aug clean
+    ├── 2/  v2-player     ├── 6/  v10-aug-ovr
+    ├── 3/  v3-matchup    ├── 7/  v12-aug-ovr
+    ├── 4/  v7-aug-ovr    └── 8/  v14-aug-ovr（最終）
 ```
+
+> 註:根目錄僅保留最終結果 `submission_FINAL.csv`(= `submission/8/` 的 v14);各版本中間 CSV 可由 `src/gen_submission_v*.py` 重新產生,不另外公開。
 
 ---
 

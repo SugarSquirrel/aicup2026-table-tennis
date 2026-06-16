@@ -69,8 +69,8 @@ ls -la src/main.ipynb                                    # 推薦先看
 ls -la src/gen_submission_v14_old_in_training.py        # production 腳本
 
 # 提交檔案在這:
-ls -la submission_FINAL.csv                              # 我們上傳的
-ls -la submission_v14-aug-ovr_incl0.csv                 # 同一個檔(備份)
+ls -la submission_FINAL.csv                              # 我們上傳的(根目錄)
+ls -la submission/8/submission_v14-aug-ovr_incl0.csv    # 同一個檔(策展存檔,內容一致)
 ```
 
 ---
