@@ -219,8 +219,8 @@ jupyter notebook main.ipynb
 
 ## 🙏 致謝
 
-- **指導教授**:中央大學孫敏德教授
-- **主辦單位**:AIdea
+- **指導教授**:國立中正大學 資訊工程學系 江振國 教授
+- **主辦單位**:教育部主辦、國立中央大學執行(競賽資料經 AIdea 平台釋出)
 - **協作 AI**:Claude (Anthropic)、ChatGPT (OpenAI)、Gemini (Google)
 - **隊伍代號**:TEAM_10808
 
