@@ -15,6 +15,13 @@ AI CUP 報告文件/
 *.npz
 src/*.npz
 
+# ===== 中間版 submission（可由 src/gen_submission_*.py 重新產生）=====
+# GitHub 只公開最終結果 submission_FINAL.csv;其餘版本本機留存於 submission_versions/
+submission_versions/
+tmp/
+/submission_*.csv
+!/submission_FINAL.csv
+
 # ===== Python / Jupyter =====
 __pycache__/
 *.pyc
