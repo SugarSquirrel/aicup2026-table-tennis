@@ -1,0 +1,29 @@
+# AI CUP 2026 桌球戰術與結果預測 — Python 依賴
+# 環境:Python 3.11(建議 conda 建立獨立環境)
+# 安裝:pip install -r requirements.txt
+#
+# ── 注意 1:PyTorch 為 CUDA 12.1 build ──────────────────────────────
+#   下方 --extra-index-url 已指向 PyTorch cu121 輪檔。
+#   若你的環境是 CPU-only 或不同 CUDA 版本,請改裝對應的 torch
+#   (本專案的神經網路訓練需要 GPU)。
+# ── 注意 2:TabPFN ──────────────────────────────────────────────────
+#   首次使用需到 https://priorlabs.ai 註冊並接受 license,
+#   設定環境變數 TABPFN_TOKEN(或放 tabpfn_apikey.txt,已 gitignore)。
+#   權重於首次執行時下載並快取,之後可離線推論。
+# ─────────────────────────────────────────────────────────────────────
+
+--extra-index-url https://download.pytorch.org/whl/cu121
+
+pandas==2.3.3
+numpy==2.4.6
+scikit-learn==1.6.1
+lightgbm==4.6.0
+torch==2.5.1+cu121
+tabpfn==8.0.3
+tabpfn_extensions==0.4.1
+matplotlib==3.10.9
+
+# Notebook 執行
+jupyter
+nbformat==5.10.4
+nbconvert==7.17.1

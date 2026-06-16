@@ -141,22 +141,23 @@
 ## ⚙️ 重現環境
 
 ```bash
-# 1. 建立環境
+# 1. 建立環境(Python 3.11)並安裝依賴
 conda create -n aicup2026 python=3.11 -y
 conda activate aicup2026
-pip install pandas numpy scikit-learn lightgbm matplotlib jupyter nbformat
-pip install torch --index-url https://download.pytorch.org/whl/cu121   # 配合 RTX 系列 GPU
-pip install tabpfn tabpfn_extensions
+pip install -r requirements.txt
+#   ↑ requirements.txt 已固定版本,並含 torch cu121 的 --extra-index-url。
+#     CPU-only 或不同 CUDA 版本者,請改裝對應的 torch(本專案神經網路需 GPU)。
 
 # 2. TabPFN token
-# 去 https://priorlabs.ai 註冊接受 license,設定 TABPFN_TOKEN 環境變數
-# 或建立 tabpfn_apikey.txt(已在 .gitignore,絕對不要 commit)
+#   去 https://priorlabs.ai 註冊接受 license,設定環境變數 TABPFN_TOKEN
+#   (或建立 tabpfn_apikey.txt,已在 .gitignore,絕對不要 commit)
+#   權重於首次執行時下載並快取,之後可離線推論。
 
-# 3. 資料放好(從 AIdea 下載)
-# data/train.csv
-# data/test_new.csv
-# data/Reference_Only_Old_Test_Data/test.csv
-# data/Reference_Only_Old_Test_Data/README.txt
+# 3. 資料放好(從 AIdea 下載,勿公開重新散布)
+#   data/train.csv
+#   data/test_new.csv
+#   data/Reference_Only_Old_Test_Data/test.csv
+#   data/Reference_Only_Old_Test_Data/README.txt
 ```
 
 ## 🚀 重現最終結果
@@ -183,6 +184,7 @@ jupyter notebook main.ipynb
 ```
 .
 ├── README.md                              ← 你正在看
+├── requirements.txt                       ← Python 依賴(pip install -r)
 ├── FINAL_SUBMISSION.md                    ← 組員想看「最終版本是哪個」必看
 ├── LB_results.md                          ← 每個版本的 public/private LB 對照
 ├── data/                                  ← 從 AIdea 下載放這(已 gitignore)
