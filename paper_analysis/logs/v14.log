@@ -1,0 +1,22 @@
+v14 (filter+old-train+blend α=0.5) CV-B: action F1=0.3669 w=(np.float64(0.35), np.float64(0.25), np.float64(0.4)) β=0.000  | CV-A=0.3538
+                                   point  F1=0.1957 w=(np.float64(0.3), np.float64(0.4), np.float64(0.3)) β=0.125  | CV-A=0.1908
+                                   server AUC=0.6150 w=(np.float64(0.15), np.float64(0.55), np.float64(0.3))
+                                   => CV-B Overall = 0.3480
+
+[per-stratum]
+  seen    (n=11723):  action=0.3730  point=0.1981
+  rescued (n=  378):  action=0.3949  point=0.1531
+  cold    (n= 2894):  action=0.2522  point=0.1597
+v12 noise filter: 1053/14995 rallies excluded (prob_true_action < 0.05)
+v14 Priority 3:  LGBM train +2353 old all-prefix samples (65231 train + 2353 old = 67584 total)
+                 TabPFN sampled train +838 old (13942 train + 838 old = 14780 total)
+                 GRU train +2353 old seq samples (65231 train + 2353 old = 67584 total)
+v12 multi-seed: training 3 v7-GRUs + 3 v8-GRUs (seeds=[42, 1, 2])...
+  v7 multi-seed done in 29s
+  v8 multi-seed done in 34s
+v10: blend α=0.5 of (mean-of-3-v7-seeds) + (mean-of-3-v8-seeds) at test
+server override applied to 1236/1845 rallies
+[incl0] rows=1845 action={1: np.int64(477), 6: np.int64(243), 13: np.int64(240)} point={9: np.int64(696), 0: np.int64(356), 8: np.int64(288)}
+[excl0] rows=1845 action={1: np.int64(478), 13: np.int64(263), 6: np.int64(243)} point={9: np.int64(793), 8: np.int64(449), 5: np.int64(179)}
+v14 submissions written 165s
+V14DONE

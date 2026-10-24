@@ -1,0 +1,11 @@
+[17:58:20] START v7 (gen_submission_v7_actionaug.py)
+[18:09:14] DONE  v7 in 654s
+[18:09:14] START v8 (gen_submission_v8_t2v_film.py)
+[18:20:04] DONE  v8 in 650s
+[18:20:04] START v14 (gen_submission_v14_old_in_training.py)
+[18:23:43] DONE  v14 in 219s
+[18:23:43] START v14g (gen_submission_v14g_gated_old_training.py)
+[18:28:21] DONE  v14g in 278s
+[18:28:21] START oof (oof_ablation_v10_v14.py)
+[18:56:05] DONE  oof in 1664s
+ALL DONE

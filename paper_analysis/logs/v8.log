@@ -1,0 +1,27 @@
+Fold-safety asserts passed (old.match disjoint train.match; rally_uid disjoint; RangeIndex).
+v7 task-specific gating: action=train+old  point=train-only  server=train-only
+Running v7 5-fold OOF (dual stat sets: aug + train-only)...
+  pre-built global sampled seq: 14995 samples, aligned with Xs
+  fold 0: trained LGBM/TabPFN/GRU in 118s | eval n=2706 seen=1858 rescued=49 cold=799
+  fold 1: trained LGBM/TabPFN/GRU in 94s | eval n=2944 seen=2477 rescued=39 cold=428
+  fold 2: trained LGBM/TabPFN/GRU in 93s | eval n=3218 seen=2631 rescued=81 cold=506
+  fold 3: trained LGBM/TabPFN/GRU in 95s | eval n=2986 seen=2477 rescued=122 cold=387
+  fold 4: trained LGBM/TabPFN/GRU in 93s | eval n=3141 seen=2280 rescued=87 cold=774
+OOF complete in 8.2 min. shapes: LGBM (14995, 19)/(14995, 10)/(14995,)  TabPFN (14995, 19)/(14995, 10)/(14995,)  GRU (14995, 19)/(14995, 10)/(14995,)
+cached -> oof_v8_t2v_film.npz
+
+v8 T2V+FiLM CV-B: action F1=0.3649 w=(np.float64(0.45), np.float64(0.2), np.float64(0.35)) β=0.000  | CV-A F1=0.3494
+                          point  F1=0.1945 w=(np.float64(0.35), np.float64(0.3), np.float64(0.35)) β=0.125  | CV-A F1=0.1901
+                          server AUC=0.6146 w=(np.float64(0.2), np.float64(0.65), np.float64(0.15))
+                          => CV-B Overall = 0.3467
+
+[per-stratum F1] (action / point)
+  seen    (n=11723):  action=0.3726  point=0.1966
+  rescued (n=  378):  action=0.2930  point=0.1354
+  cold    (n= 2894):  action=0.2395  point=0.1634
+v8 stats: aug players(action)=189  train-only players(point/server)=166  clusters aug=6/train-only=6
+server override applied to 1236/1845 rallies
+[incl0] rows=1845 action={1: np.int64(455), 6: np.int64(249), 13: np.int64(226)} point={0: np.int64(636), 9: np.int64(444), 7: np.int64(201)}
+[excl0] rows=1845 action={1: np.int64(457), 13: np.int64(251), 6: np.int64(250)} point={9: np.int64(598), 8: np.int64(455), 7: np.int64(343)}
+v8 submissions written 114s
+V8DONE
