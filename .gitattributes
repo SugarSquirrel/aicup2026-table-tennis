@@ -1,0 +1,2 @@
+# shell scripts must keep LF so Git Bash / Linux can run them after a Windows checkout
+*.sh text eol=lf
