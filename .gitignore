@@ -10,6 +10,8 @@ data/
 AI CUP 報告文件/
 報告圖表/
 *.docx
+# Overleaf 論文 clone(獨立 git repo,推到 Overleaf,不進本 repo)
+paper/
 
 # ===== 可重新生成的大型快取 =====
 *.npz
@@ -35,3 +37,11 @@ __pycache__/
 
 # 二進位宣傳檔
 *.pptx
+# 官方測試正解(賽後釋出,勿公開重新散布)
+test_answer_solution.csv
+
+# uv 虛擬環境
+.venv/
+
+# 實驗 log(paper_analysis/run_experiments.sh 產生)
+paper_analysis/logs/
