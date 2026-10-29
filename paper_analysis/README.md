@@ -20,6 +20,7 @@ IEEE BigData 2026 AI-Sports workshop 論文裡,賽後分析的數字都由這裡
 | `private_strata.py` | 各版本在 private 上的 seen/rescued/cold 分層 F1 + 分層內 bootstrap → `results/private_strata*.csv` | Table VI、Sec. V-D、VI-B/C |
 | `pair_bootstrap_private.py` | 以選手配對為群集的 paired bootstrap(59 組配對;含 v14→v14g 與分層)→ `results/pair_bootstrap_private.csv`、`results/pair_bootstrap_strata.csv` | Table V caption、Sec. V-C/V-D、VI、VII(v2)|
 | `private_by_idtype.py` | 各版本 private 分數與三項子分數,拆成 pooled IDs(340–354)與新比賽(355–363)→ `results/private_by_idtype.csv` | Sec. V-D(v2 熟悉配對/新比賽分組)|
+| `check_split_ids.py` | private ID 結構檢查(rally 編號=比分和+1、配對是否在 reference、比分進程一致性)、Table I 兩列、private 選手、資料瑕疵 → `results/split_checks.csv` | Table I、Sec. III-C、Sec. VII(v2;即 TODO 中的 check_a2_ids.py)|
 
 ```bash
 python paper_analysis/score_submissions.py
