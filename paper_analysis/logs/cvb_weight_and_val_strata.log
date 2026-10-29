@@ -1,0 +1,18 @@
+numpy 2.4.6, scikit-learn 1.6.1
+test rallies with >=1 player in train            0.9377  1730/1845
+test next-hitter seen share                      0.7003  1292/1845
+  fold 0: eval n=2706 seen=1858 rescued=49 cold=799
+  fold 1: eval n=2944 seen=2477 rescued=39 cold=428
+  fold 2: eval n=3218 seen=2631 rescued=81 cold=506
+  fold 3: eval n=2986 seen=2477 rescued=122 cold=387
+  fold 4: eval n=3141 seen=2280 rescued=87 cold=774
+validation samples: seen                         11723  
+validation samples: rescued                      378  
+validation samples: cold                         2894  
+reconstruction matches v7 strata sizes           True  expected {'seen': 11723, 'rescued': 378, 'cold': 2894}
+rescued validation samples whose pairing is in reference 88  of 378
+share                                            0.2328  
+matches among rescued validation samples         10  
+matches among those in-reference samples         2  
+
+saved /home/ryueee17/Lab/Competition/2026 AI CUP/research/worktrees/paper-v2-numbers/paper_analysis/results/cvb_weight_and_val_strata.csv

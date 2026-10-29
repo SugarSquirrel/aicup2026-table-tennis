@@ -1,0 +1,11 @@
+check,value,note
+test rallies with >=1 player in train,0.9377,1730/1845
+test next-hitter seen share,0.7003,1292/1845
+validation samples: seen,11723,
+validation samples: rescued,378,
+validation samples: cold,2894,
+reconstruction matches v7 strata sizes,True,"expected {'seen': 11723, 'rescued': 378, 'cold': 2894}"
+rescued validation samples whose pairing is in reference,88,of 378
+share,0.2328,
+matches among rescued validation samples,10,
+matches among those in-reference samples,2,

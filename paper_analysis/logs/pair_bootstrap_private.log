@@ -1,0 +1,73 @@
+[skip] v14g: submission_v14g-aug-ovr_incl0.csv not found
+WARNING: 1 rallies without exactly two player IDs: {19029: (49,)}
+private rallies 609, pairings 59 (pairings in match IDs 355-363: 9, in 340-354: 50)
+
+== overall, resampling 59 pairings (2000 resamples)
+pair       metric     delta               95% CI P(delta>0)
+v1->v2     score    +0.0158 [-0.0031, +0.0346]      0.950
+v1->v2     action_  +0.0286 [-0.0171, +0.0727]      0.880
+v1->v2     point_f  +0.0109 [-0.0154, +0.0384]      0.818
+v1->v2     server_  +0.0000 [+0.0000, +0.0000]      0.000
+v2->v3     score    +0.0056 [-0.0127, +0.0221]      0.725
+v2->v3     action_  +0.0012 [-0.0178, +0.0221]      0.601
+v2->v3     point_f  +0.0127 [-0.0294, +0.0484]      0.711
+v2->v3     server_  +0.0000 [+0.0000, +0.0000]      0.000
+v3->v7     score    +0.0113 [-0.0122, +0.0362]      0.840
+v3->v7     action_  +0.0185 [-0.0370, +0.0755]      0.742
+v3->v7     point_f  +0.0074 [-0.0192, +0.0393]      0.719
+v3->v7     server_  +0.0046 [+0.0004, +0.0101]      0.983
+v7->v10    score    -0.0064 [-0.0174, +0.0030]      0.106
+v7->v10    action_  -0.0057 [-0.0297, +0.0164]      0.320
+v7->v10    point_f  -0.0096 [-0.0286, +0.0059]      0.132
+v7->v10    server_  -0.0016 [-0.0050, +0.0015]      0.193
+v10->v12   score    -0.0037 [-0.0169, +0.0101]      0.307
+v10->v12   action_  -0.0080 [-0.0316, +0.0166]      0.272
+v10->v12   point_f  -0.0035 [-0.0266, +0.0160]      0.358
+v10->v12   server_  +0.0044 [-0.0016, +0.0109]      0.927
+v12->v14   score    +0.0108 [-0.0246, +0.0382]      0.666
+v12->v14   action_  +0.0498 [-0.0266, +0.1046]      0.880
+v12->v14   point_f  -0.0223 [-0.0581, +0.0213]      0.149
+v12->v14   server_  -0.0008 [-0.0056, +0.0048]      0.403
+v1->v7     score    +0.0326 [+0.0043, +0.0592]      0.989
+v1->v7     action_  +0.0484 [-0.0198, +0.1139]      0.915
+v1->v7     point_f  +0.0309 [-0.0014, +0.0612]      0.969
+v1->v7     server_  +0.0046 [+0.0004, +0.0101]      0.983
+v7->v14    score    +0.0007 [-0.0376, +0.0306]      0.431
+v7->v14    action_  +0.0361 [-0.0407, +0.0911]      0.779
+v7->v14    point_f  -0.0354 [-0.0706, +0.0067]      0.045
+v7->v14    server_  +0.0020 [-0.0034, +0.0091]      0.770
+v1->v14    score    +0.0333 [-0.0145, +0.0737]      0.899
+v1->v14    action_  +0.0845 [-0.0300, +0.1776]      0.909
+v1->v14    point_f  -0.0045 [-0.0439, +0.0436]      0.421
+v1->v14    server_  +0.0065 [-0.0005, +0.0167]      0.967
+
+== per stratum, resampling the pairings present in each stratum (2000 resamples)
+-- seen: 357 rallies, 53 pairings
+   v3->v7    action_f1 -0.034 [-0.095, +0.029]
+   v3->v7    point_f1  +0.017 [-0.033, +0.068]
+   v7->v10   action_f1 -0.042 [-0.069, -0.000]
+   v7->v10   point_f1  +0.009 [-0.011, +0.028]
+   v12->v14  action_f1 +0.049 [-0.002, +0.078]
+   v12->v14  point_f1  +0.012 [-0.028, +0.068]
+   v7->v14   action_f1 +0.024 [-0.021, +0.059]
+   v7->v14   point_f1  -0.002 [-0.034, +0.035]
+-- rescued: 95 rallies, 24 pairings
+   v3->v7    action_f1 +0.073 [-0.032, +0.148]
+   v3->v7    point_f1  +0.017 [-0.062, +0.087]
+   v7->v10   action_f1 -0.000 [-0.006, +0.004]
+   v7->v10   point_f1  -0.076 [-0.145, +0.006]
+   v12->v14  action_f1 +0.119 [+0.022, +0.220]
+   v12->v14  point_f1  +0.014 [-0.080, +0.108]
+   v7->v14   action_f1 +0.062 [-0.042, +0.172]
+   v7->v14   point_f1  -0.062 [-0.152, +0.043]
+-- cold: 157 rallies, 8 pairings
+   v3->v7    action_f1 +0.050 [-0.006, +0.117]
+   v3->v7    point_f1  +0.050 [+0.007, +0.138]
+   v7->v10   action_f1 +0.011 [-0.027, +0.043]
+   v7->v10   point_f1  -0.032 [-0.100, +0.021]
+   v12->v14  action_f1 -0.005 [-0.062, +0.017]
+   v12->v14  point_f1  -0.111 [-0.170, -0.062]
+   v7->v14   action_f1 -0.013 [-0.094, +0.039]
+   v7->v14   point_f1  -0.138 [-0.227, -0.075]
+
+saved /home/ryueee17/Lab/Competition/2026 AI CUP/research/worktrees/paper-v2-numbers/paper_analysis/results/pair_bootstrap_private.csv and /home/ryueee17/Lab/Competition/2026 AI CUP/research/worktrees/paper-v2-numbers/paper_analysis/results/pair_bootstrap_strata.csv

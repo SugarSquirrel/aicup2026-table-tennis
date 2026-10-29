@@ -1,0 +1,53 @@
+private match IDs: [np.int64(340), np.int64(341), np.int64(342), np.int64(343), np.int64(344), np.int64(345), np.int64(346), np.int64(347), np.int64(348), np.int64(349), np.int64(350), np.int64(351), np.int64(352), np.int64(353), np.int64(354), np.int64(355), np.int64(356), np.int64(357), np.int64(358), np.int64(359), np.int64(360), np.int64(361), np.int64(362), np.int64(363)]
+== rally number = scoreSelf + scoreOther + 1
+rally_number_eq_score_sum_plus_1   train          0.9999  14993/14995 rallies
+rally_number_eq_score_sum_plus_1   reference      1.0  1236/1236 rallies
+rally_number_eq_score_sum_plus_1   new matches    1.0  347/347 rallies
+rally_number_eq_score_sum_plus_1   pooled IDs     0.0267  7/262 rallies
+
+== pairings
+WARNING: 1 rallies without exactly two player IDs: {19029: (49,)}
+pairings                           new matches    9  
+pairings                           pooled IDs     50  
+pairings                           private total  59  
+pairings_in_reference              new matches    0  of 9
+pairings_in_reference              pooled IDs     50  of 50
+pairings_per_pooled_ID             pooled IDs     12-18  over 15 IDs
+pairings_per_new_match             new matches    1-1  over 9 IDs
+
+== score-progression test (see docstring)
+WARNING: 1 rallies without exactly two player IDs: {19029: (49,)}
+score_state_consistency            matched        0.1107  262 pooled rallies
+score_state_consistency            mismatched     0.1384  min 0.1069 max 0.1870 over 20 derangements
+
+== Table I rows
+tableI_match_ids                   new matches    9  
+tableI_rallies                     new matches    347  
+tableI_strokes                     new matches    1273  
+tableI_players                     new matches    16  
+tableI_match_ids                   pooled IDs     15  
+tableI_rallies                     pooled IDs     262  
+tableI_strokes                     pooled IDs     806  
+tableI_players                     pooled IDs     61  
+tableI_match_ids                   private        24  
+tableI_rallies                     private        609  
+tableI_strokes                     private        2079  
+tableI_players                     private        69  
+
+== private players
+private_players                    total          69  
+private_players                    in reference   61  
+private_players                    in train       38  
+private_players                    in neither     8  IDs 199,200,201,202,203,204,205,206
+private_players_in_neither         play in new matches 8  of 8
+
+== data inconsistencies
+train_player_multiple_sex          player 109     2  {1: [115], 2: [262]}
+train_players_with_multiple_sex    train          1  
+hitter_equals_opponent_records     train          38  
+hitter_equals_opponent_records     reference      6  
+hitter_equals_opponent_records     test           6  
+shared_ids_same_sex                train-test     40/40  
+shared_ids_same_sex                reference-test 63/63  
+
+saved /home/ryueee17/Lab/Competition/2026 AI CUP/research/worktrees/paper-v2-numbers/paper_analysis/results/split_checks.csv

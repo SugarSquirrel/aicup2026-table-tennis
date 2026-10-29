@@ -1,0 +1,15 @@
+private match IDs: [np.int64(340), np.int64(341), np.int64(342), np.int64(343), np.int64(344), np.int64(345), np.int64(346), np.int64(347), np.int64(348), np.int64(349), np.int64(350), np.int64(351), np.int64(352), np.int64(353), np.int64(354), np.int64(355), np.int64(356), np.int64(357), np.int64(358), np.int64(359), np.int64(360), np.int64(361), np.int64(362), np.int64(363)]
+rallies per group: {'new matches': 347, 'pooled IDs': 262}
+[skip] v14g: submission_v14g-aug-ovr_incl0.csv not found
+                       score                          action_f1                           point_f1                         server_auc                        
+group             pooled IDs new matches all private pooled IDs new matches all private pooled IDs new matches all private pooled IDs new matches all private
+version system                                                                                                                                               
+v1      Base           0.357       0.352       0.356      0.316       0.311       0.323      0.169       0.152       0.153      0.814       0.834       0.825
+v2      Player         0.384       0.365       0.372      0.370       0.326       0.352      0.183       0.168       0.164      0.814       0.834       0.825
+v3      Matchup        0.376       0.379       0.377      0.371       0.330       0.353      0.163       0.200       0.177      0.814       0.834       0.825
+v7      Core           0.377       0.401       0.388      0.349       0.385       0.372      0.182       0.201       0.184      0.823       0.834       0.830
+v10     Blend          0.360       0.403       0.382      0.329       0.391       0.366      0.161       0.201       0.175      0.822       0.834       0.828
+v12     Filter         0.355       0.400       0.378      0.318       0.381       0.358      0.155       0.201       0.171      0.830       0.837       0.833
+v14     Submitted      0.402       0.365       0.389      0.396       0.372       0.408      0.193       0.123       0.149      0.833       0.833       0.832
+
+saved /home/ryueee17/Lab/Competition/2026 AI CUP/research/worktrees/paper-v2-numbers/paper_analysis/results/private_by_idtype.csv
