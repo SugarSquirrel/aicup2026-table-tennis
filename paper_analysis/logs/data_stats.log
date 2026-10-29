@@ -1,0 +1,32 @@
+== Table I
+train      matches= 216 rallies=14,995 strokes= 84,707 players= 166
+reference  matches=  55 rallies= 1,236 strokes=  3,589 players=  63
+test       matches=  79 rallies= 1,845 strokes=  5,668 players=  71
+  public   matches=  55 rallies= 1,236 strokes=  3,589 players=  63
+  private  matches=  24 rallies=   609 strokes=  2,079 players=  69
+
+== Split structure
+reference rallies all in test: True
+reference prefixes identical to public test part: True (3589/3589 strokes)
+private matches: [np.int64(340), np.int64(341), np.int64(342)] ... 24
+private matches in train/ref: 0
+
+test players 71, unseen in train 31
+private players 69: in train 38, in reference 61
+
+== Next-hitter strata (seen = in train, rescued = reference only, cold = neither)
+public   n=1236 seen=0.756 rescued=0.244 cold=0.000
+private  n=609 seen=0.586 rescued=0.156 cold=0.258
+
+== Prefix lengths
+train full rallies: median=5 mean=5.65
+test     prefixes: median=2 mean=3.07 len1=508 (27.5%)
+public   prefixes: median=2 mean=2.90 len1=398 (32.2%)
+private  prefixes: median=3 mean=3.41 len1=110 (18.1%)
+
+train: P(pointId=0 | last stroke)=1.000  P(pointId=0 | not last)=0.004
+train: P(server wins | even length)=0.999  P(server wins | odd)=0.001
+
+== Truncation mechanism (test answers)
+private  target is rally-ending: 0.570; parity rule correct on those: 0.994
+public   target is rally-ending: 0.433; parity rule correct on those: 0.979

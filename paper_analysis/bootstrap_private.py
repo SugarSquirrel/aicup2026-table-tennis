@@ -25,7 +25,7 @@ SUBS = {
 }
 # consecutive steps, then cumulative ones
 PAIRS = [("v1", "v2"), ("v2", "v3"), ("v3", "v7"), ("v7", "v10"), ("v10", "v12"), ("v12", "v14"),
-         ("v1", "v7"), ("v7", "v14"), ("v1", "v14")]
+         ("v1", "v7"), ("v7", "v14"), ("v1", "v14"), ("v1", "v3")]
 
 ans = pd.read_csv(ROOT / "test_answer_solution.csv")
 ans = ans[ans.rally_uid >= 20000].reset_index(drop=True)

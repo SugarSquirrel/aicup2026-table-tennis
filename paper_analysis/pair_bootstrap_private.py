@@ -42,9 +42,9 @@ SUBS = {
 }
 # same steps as bootstrap_private.py PAIRS, plus Submitted -> ActionOnly
 PAIRS = [("v1", "v2"), ("v2", "v3"), ("v3", "v7"), ("v7", "v10"), ("v10", "v12"), ("v12", "v14"),
-         ("v1", "v7"), ("v7", "v14"), ("v1", "v14"), ("v14", "v14g")]
+         ("v1", "v7"), ("v7", "v14"), ("v1", "v14"), ("v14", "v14g"), ("v1", "v3")]
 # same steps as private_strata.py, plus Submitted -> ActionOnly
-STRATA_PAIRS = [("v3", "v7"), ("v7", "v10"), ("v12", "v14"), ("v7", "v14"), ("v14", "v14g")]
+STRATA_PAIRS = [("v3", "v7"), ("v7", "v10"), ("v12", "v14"), ("v7", "v14"), ("v14", "v14g"), ("v10", "v12")]
 
 te = pd.read_csv(ROOT / "data/test_new.csv")
 tr = pd.read_csv(ROOT / "data/train.csv")
