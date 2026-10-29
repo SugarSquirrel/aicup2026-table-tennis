@@ -1,0 +1,13 @@
+          action_f1         point_f1        
+split       private  public  private  public
+sys                                         
+Base         0.3232  0.3091   0.1534  0.1555
+Player       0.3518  0.3851   0.1643  0.1603
+Matchup      0.3531  0.3768   0.1770  0.1564
+Core         0.3716  0.3721   0.1844  0.1560
+Blend        0.3659  0.3769   0.1748  0.1678
+Filter       0.3579  0.3925   0.1713  0.1505
+Submitted    0.4077  0.4277   0.1490  0.1575
+action_f1: Spearman rho = +0.464 (p = 0.294, n = 7)
+point_f1: Spearman rho = -0.036 (p = 0.939, n = 7)
+saved /home/ryueee17/Lab/Competition/2026 AI CUP/research/worktrees/paper-v2-numbers/paper_analysis/results/public_private_rank_corr.csv

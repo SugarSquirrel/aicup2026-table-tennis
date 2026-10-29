@@ -1,0 +1,16 @@
+rallies per (id type, stratum):
+col_0        cold  rescued  seen
+row_0                           
+new matches   157       18   172
+pooled IDs      0       77   185
+id_type pooled IDs         new matches               
+stratum       seen rescued        seen rescued   cold
+version                                              
+v1           0.321   0.278       0.370   0.107  0.309
+v2           0.397   0.263       0.399   0.187  0.277
+v3           0.379   0.306       0.407   0.194  0.278
+v7           0.326   0.372       0.410   0.244  0.329
+v10          0.299   0.372       0.370   0.244  0.340
+v12          0.314   0.287       0.377   0.290  0.321
+v14          0.361   0.396       0.398   0.430  0.315
+saved /home/ryueee17/Lab/Competition/2026 AI CUP/research/worktrees/paper-v2-numbers/paper_analysis/results/private_strata_by_idtype.csv
